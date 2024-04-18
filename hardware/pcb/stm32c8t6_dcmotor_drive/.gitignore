@@ -1,0 +1,16 @@
+/stm32c8t6_dcmotor_drive-backups
+*.kicad_prl
+*.log
+*.bak
+fp-info-cache
+*.kicad_pcb-bak
+*-bak
+*-backups
+*-cache*
+*-bak*
+_autosave*
+\#auto_saved_files\#
+~_autosave-*
+~*~_autosave-*
+~*
+jlcpcb/
