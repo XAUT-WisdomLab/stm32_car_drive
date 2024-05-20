@@ -1,4 +1,4 @@
-/stm32c8t6_dcmotor_drive-backups
+car-backups
 *.kicad_prl
 *.log
 *.bak
