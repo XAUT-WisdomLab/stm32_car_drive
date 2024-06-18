@@ -8,7 +8,7 @@
 	(property "Reference" "REF**"
 		(at 3.8 -8 0)
 		(layer "F.SilkS")
-		(uuid "a024ffcd-7be5-4871-a4ee-2484a59b02f8")
+		(uuid "4af230c9-6451-4635-be01-608a71ae2f9a")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "Buzzer"
 		(at 3.8 8 0)
 		(layer "F.Fab")
-		(uuid "155b2380-5160-49d9-97d3-ebf9351e16b7")
+		(uuid "51d18966-7f5c-40b3-98fb-763c5a92ea51")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "a10730e4-7a80-413b-9b02-9948da61c952")
+		(uuid "e873c1f9-629a-491e-b24d-6b339ed188fc")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44,19 +44,19 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5ab4e129-1bfe-4f64-9209-0fcf7da1ca6f")
+		(uuid "e0d711c7-d84b-4a5e-a1d6-a9ed87ae64b1")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Buzzer, polarized"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c603cd31-7c1b-4e33-a652-49845f72607b")
+		(uuid "ef7e4323-e669-4a46-b10c-3ec8f52fdd3f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -73,7 +73,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "215fffcf-0d44-4254-b657-e818f078a101")
+		(uuid "8bdea751-cce9-498b-9c2b-ea1cdca4666e")
 	)
 	(fp_circle
 		(center 3.8 0)
@@ -84,7 +84,7 @@
 		)
 		(fill none)
 		(layer "F.CrtYd")
-		(uuid "452314e0-a1f6-4ce6-9f14-d0053f90b379")
+		(uuid "9d12a9a8-7836-4a65-bea1-2e6b60901811")
 	)
 	(fp_circle
 		(center 3.8 0)
@@ -95,12 +95,12 @@
 		)
 		(fill none)
 		(layer "F.Fab")
-		(uuid "1f2116ad-220c-443c-8355-e6f7b111fff4")
+		(uuid "ad9a5629-1b5c-495f-b943-78f51d75d62b")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 3.8 0 0)
 		(layer "F.Fab")
-		(uuid "41338ad3-5269-4b5c-a04d-9f02aec38392")
+		(uuid "f64791e6-510c-49d0-bb9d-f9f0de3a6628")
 		(effects
 			(font
 				(size 1 1)
@@ -115,7 +115,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(roundrect_rratio 0.147)
-		(uuid "74d4ec27-ae46-4c1d-a13a-0fd66686c793")
+		(uuid "3c8b5072-126b-4ec1-92c7-ee09f3b9e8e3")
 	)
 	(pad "2" thru_hole circle
 		(at 7.6 0)
@@ -123,7 +123,7 @@
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "d8cd52b9-7ee3-448e-8586-635171d8557d")
+		(uuid "6e064241-575d-495c-beda-a6ccfe817633")
 	)
 	(model "${KIPRJMOD}/packages3D/Indicator_PUI_AI-1440-TWT-24V-2-R.wrl"
 		(offset

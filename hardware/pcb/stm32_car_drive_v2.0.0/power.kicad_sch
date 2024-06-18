@@ -2416,12 +2416,6 @@
 		(uuid "1602426e-fbf0-4eb6-bb97-a1dc758c24f9")
 	)
 	(junction
-		(at 96.52 46.99)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "23e4c653-0404-49ea-93b2-731f68c404ae")
-	)
-	(junction
 		(at 237.49 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2492,6 +2486,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "95bf087e-63dd-4da5-93f9-18b76c73284d")
+	)
+	(junction
+		(at 96.52 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b56cc3ef-002b-4be1-9d9f-581a687e2298")
 	)
 	(junction
 		(at 74.93 118.11)
@@ -2797,7 +2797,7 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 46.99) (xy 100.33 46.99)
+			(xy 90.17 46.99) (xy 96.52 46.99)
 		)
 		(stroke
 			(width 0)
@@ -2957,16 +2957,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 46.99) (xy 90.17 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9faa4495-a876-4855-9115-6bf0a9a027a1")
-	)
-	(wire
-		(pts
 			(xy 80.01 58.42) (xy 124.46 58.42)
 		)
 		(stroke
@@ -3084,6 +3074,16 @@
 			(type default)
 		)
 		(uuid "c9e92110-22ab-4860-a4f2-32caa8cd8fa0")
+	)
+	(wire
+		(pts
+			(xy 96.52 46.99) (xy 100.33 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc536cff-7f44-4226-9d89-99c3276c6c1a")
 	)
 	(wire
 		(pts
@@ -4719,76 +4719,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Library:B340")
-		(at 96.52 50.8 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "754fb39e-b1cc-49e8-83e4-c757cd48fa1d")
-		(property "Reference" "D8"
-			(at 99.06 49.8475 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "B340"
-			(at 99.06 52.3875 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMC"
-			(at 92.075 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf"
-			(at 96.52 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "40V 3A Schottky Barrier Rectifier Diode, SMC"
-			(at 96.52 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "55ca1d46-66e3-42a9-875f-c27e8a3dc23d")
-		)
-		(pin "2"
-			(uuid "4fc12021-f3db-4539-87fa-9fbc6cbf0ce7")
-		)
-		(instances
-			(project "car"
-				(path "/6ff1c62f-229a-40ac-8189-775d26f32bff/dc2ba5e3-fa7c-40e9-857f-643b214c2f66"
-					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Library:+3.3V")
 		(at 227.33 53.34 0)
 		(unit 1)
@@ -5884,6 +5814,76 @@
 			(project "car"
 				(path "/6ff1c62f-229a-40ac-8189-775d26f32bff/dc2ba5e3-fa7c-40e9-857f-643b214c2f66"
 					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Library:B340")
+		(at 96.52 50.8 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3f74a5f-62c7-4c33-8bb3-90b9f6148824")
+		(property "Reference" "D1"
+			(at 99.06 49.8475 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "B340"
+			(at 99.06 52.3875 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 92.075 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf"
+			(at 96.52 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 96.52 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a518381a-d592-4fad-8871-65946351ee0e")
+		)
+		(pin "2"
+			(uuid "0cc79d87-2392-4add-967a-d4da682a07c7")
+		)
+		(instances
+			(project "car"
+				(path "/6ff1c62f-229a-40ac-8189-775d26f32bff/dc2ba5e3-fa7c-40e9-857f-643b214c2f66"
+					(reference "D1")
 					(unit 1)
 				)
 			)

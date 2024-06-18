@@ -6,9 +6,9 @@
 	(descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 	(tags "resistor")
 	(property "Reference" "REF**"
-		(at 0 -1.82 0)
+		(at 3.0625 0 -90)
 		(layer "F.SilkS")
-		(uuid "7dd96ff9-deb9-41d1-876b-2c286ad553c3")
+		(uuid "d2303ba3-7b34-4e39-bd4a-cf0ade8cd8db")
 		(effects
 			(font
 				(size 1 1)
@@ -17,9 +17,9 @@
 		)
 	)
 	(property "Value" "0.15R 1206 1WOCP=3.3V/10/0.15R=2.2A"
-		(at 0 1.82 0)
+		(at 0 1.82 180)
 		(layer "F.Fab")
-		(uuid "87fb58af-e6fe-40c5-81e0-0058952e90d9")
+		(uuid "cd3c3cc6-18a5-400f-99a4-cb24254b5fd5")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c624d6c1-7465-4d9c-a648-c5d7d06a5def")
+		(uuid "330b3e71-b2d9-4611-a458-e8c4791ecc6d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44,7 +44,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6b5ed06a-75aa-4e3c-85b6-4b6f084ce438")
+		(uuid "c2c8f011-88e8-447d-a6b0-e4a4338f219c")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -56,7 +56,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "82b6a888-c827-4235-a527-df0f6e36668b")
+		(uuid "b92ba148-179d-4880-8718-b8294fae7427")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -72,7 +72,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "9a893f78-c92d-4f2a-985c-8b38d8d41297")
+		(uuid "2d27ef5b-7a16-4148-ae32-43da0f77adc5")
 	)
 	(fp_line
 		(start -0.727064 0.91)
@@ -82,7 +82,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "c8ffbf5e-cedc-4f43-a2e4-23c5f0d2ac76")
+		(uuid "f2f5bb66-4a2c-4fdb-a44e-dbb2c31a7011")
 	)
 	(fp_line
 		(start -2.28 -1.12)
@@ -92,7 +92,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "61bda71d-e7d9-4093-b610-3656c5ec3169")
+		(uuid "bc85b7b1-ade3-4968-8a64-f993bce28ed6")
 	)
 	(fp_line
 		(start -2.28 1.12)
@@ -102,7 +102,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "3ee7ab7a-2694-4a23-b270-42a33480cd3f")
+		(uuid "f92f235d-eab5-4905-bf30-2f22ec04ae60")
 	)
 	(fp_line
 		(start 2.28 -1.12)
@@ -112,7 +112,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "7ff939d5-d6a8-4c9d-b69e-e36ec6530db6")
+		(uuid "4592d933-eda6-48bc-bbdb-6c6b0467bc0e")
 	)
 	(fp_line
 		(start 2.28 1.12)
@@ -122,7 +122,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "a08820b7-5e70-4071-b441-d4d828f4c884")
+		(uuid "c914fbb1-5a0c-41af-8c46-4db02c481309")
 	)
 	(fp_line
 		(start -1.6 -0.8)
@@ -132,7 +132,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "38266230-f9ab-424c-80bf-783d06376bc9")
+		(uuid "0f8678cb-ad40-4164-a254-2e12b038880b")
 	)
 	(fp_line
 		(start -1.6 0.8)
@@ -142,7 +142,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "c7428e5f-3fe1-4c8d-b0eb-59626707c1c3")
+		(uuid "3a65a723-daf5-4639-bc97-5df81ac8f848")
 	)
 	(fp_line
 		(start 1.6 -0.8)
@@ -152,7 +152,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "d7983e60-ba92-4118-865f-0a1b5cb72ed3")
+		(uuid "33b7688e-1fb3-4ffb-b33e-61cf50cd062e")
 	)
 	(fp_line
 		(start 1.6 0.8)
@@ -162,12 +162,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "192e392a-2ced-406c-a0b6-788966740502")
+		(uuid "131b2399-2c92-49ff-8200-7deeedb61790")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
-		(uuid "5db232e8-2659-42ce-b6eb-c2732b193913")
+		(uuid "a54d87b6-3623-4d20-8c87-6c03f56a6150")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -180,36 +180,14 @@
 		(size 1.125 1.75)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.222222)
-		(teardrops
-			(best_length_ratio 0.5)
-			(max_length 1)
-			(best_width_ratio 1)
-			(max_width 2)
-			(curve_points 0)
-			(filter_ratio 0.9)
-			(enabled yes)
-			(allow_two_segments yes)
-			(prefer_zone_connections yes)
-		)
-		(uuid "02d0f6cf-f5f9-4b3a-8ee7-59d89893a531")
+		(uuid "d8b3bbc6-97e4-4469-af09-fd335f27d7ff")
 	)
 	(pad "2" smd roundrect
 		(at 1.4625 0)
 		(size 1.125 1.75)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.222222)
-		(teardrops
-			(best_length_ratio 0.5)
-			(max_length 1)
-			(best_width_ratio 1)
-			(max_width 2)
-			(curve_points 0)
-			(filter_ratio 0.9)
-			(enabled yes)
-			(allow_two_segments yes)
-			(prefer_zone_connections yes)
-		)
-		(uuid "5948a7a2-c773-4e4c-aea0-4f4c3dae375c")
+		(uuid "76410c3f-5c19-430e-b429-a9c189213ed0")
 	)
 	(model "${KIPRJMOD}/packages3D/R_1206_3216Metric.wrl"
 		(offset

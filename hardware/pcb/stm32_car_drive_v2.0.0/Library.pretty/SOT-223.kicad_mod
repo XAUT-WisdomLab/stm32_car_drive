@@ -6,9 +6,9 @@
 	(descr "module CMS SOT223 4 pins")
 	(tags "CMS SOT")
 	(property "Reference" "REF**"
-		(at 0 -4.5 0)
+		(at 0 -4.5 180)
 		(layer "F.SilkS")
-		(uuid "d643886c-5b30-4324-b24a-10a6e6fc78ba")
+		(uuid "bed01fa2-db9e-4c15-929c-71af4abde322")
 		(effects
 			(font
 				(size 1 1)
@@ -17,9 +17,9 @@
 		)
 	)
 	(property "Value" "SGM2212-3.3XKC3G/TR"
-		(at 0 4.5 0)
+		(at 0 4.5 180)
 		(layer "F.Fab")
-		(uuid "ffb7833d-0932-4e47-b651-5dd1a611609d")
+		(uuid "1edb089c-5dd3-46ac-a4c6-4925436b46c9")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ea7e0d7f-3674-4198-8836-0fffdad701f9")
+		(uuid "a7d332c6-cd3e-4414-a918-f515740e0403")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -44,19 +44,19 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "8af08bef-bf3e-49c5-8e62-a42d042b15db")
+		(uuid "88a68ed6-dbf4-4d74-a822-a581a588d121")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "圣邦微电子（SGMICRO）推出的SGM2212是一款低噪声、小静态电流、高电源抑制比（PSRR）的低压差稳压器，其压差为280mV，负载电流为800mA。"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "bb186600-b989-46e4-b5b1-c47645097287")
+		(uuid "915eb207-bcc0-4926-a6ba-ca5e5ce9c31e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -72,7 +72,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "fed7ec49-5dd3-4c40-8840-58915f475820")
+		(uuid "b0c4d55c-f425-48ac-a156-84c9cf4877ba")
 	)
 	(fp_line
 		(start -1.85 3.41)
@@ -82,7 +82,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4b8743a4-4c6f-4c7f-886b-f0a2a829e619")
+		(uuid "29c197da-a137-4362-af75-8a0181a30cb7")
 	)
 	(fp_line
 		(start 1.91 -3.41)
@@ -92,7 +92,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "f1296c0d-3523-4d5a-9a9a-7411c251b940")
+		(uuid "21549174-1267-477d-8d24-f92f7b70c3ad")
 	)
 	(fp_line
 		(start 1.91 3.41)
@@ -102,7 +102,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "89d34ed7-cea6-4f42-9a9d-b0362104eceb")
+		(uuid "654ca1ef-bc4b-4a39-b71c-30af5fabfb37")
 	)
 	(fp_poly
 		(pts
@@ -114,7 +114,7 @@
 		)
 		(fill solid)
 		(layer "F.SilkS")
-		(uuid "47c31d0d-7f9c-455b-a7ff-3c1e4173e85b")
+		(uuid "2f0822cd-5c32-41ee-9465-caa0145ffb0b")
 	)
 	(fp_line
 		(start -4.4 -3.6)
@@ -124,7 +124,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "9293106f-b2f8-4504-850c-dc77202aa4db")
+		(uuid "c26b0a5c-2fb7-4386-97cc-eec3185d109e")
 	)
 	(fp_line
 		(start -4.4 3.6)
@@ -134,7 +134,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "90578fff-1ffe-491d-b999-649a490ccc2c")
+		(uuid "ae7b06a9-ac3a-4ead-a94e-74f9517ee4b2")
 	)
 	(fp_line
 		(start 4.4 -3.6)
@@ -144,7 +144,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "a30027bf-a955-4a60-bd9c-ca34cf481830")
+		(uuid "59cab11f-7558-40f1-82b4-70fa2ccdb7f6")
 	)
 	(fp_line
 		(start 4.4 3.6)
@@ -154,7 +154,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "6eb84e04-ff99-453a-95f4-80296b103c4e")
+		(uuid "ff5358e1-2468-4244-88ef-9ecad0941d9a")
 	)
 	(fp_line
 		(start -1.85 -2.3)
@@ -164,7 +164,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "3c82b2d2-c44e-4d34-9eb6-99a4d9907d44")
+		(uuid "91510f72-1d32-4640-8b51-d860252528eb")
 	)
 	(fp_line
 		(start -1.85 -2.3)
@@ -174,7 +174,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "d663d8b5-5078-4b77-94f0-b113351aaeaf")
+		(uuid "5c797961-770f-4224-84a9-3700f9622ce4")
 	)
 	(fp_line
 		(start -1.85 3.35)
@@ -184,7 +184,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "5d28d4bd-fdc9-4432-989b-84be7f022731")
+		(uuid "39942182-d24b-4ed4-a1ce-d189b4e29b9f")
 	)
 	(fp_line
 		(start -0.8 -3.35)
@@ -194,7 +194,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "13198e04-8507-43c2-9ec1-ba43e762c58f")
+		(uuid "3b6a2411-daf3-46c1-96f5-141ea6a4b77d")
 	)
 	(fp_line
 		(start 1.85 -3.35)
@@ -204,12 +204,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "efd6d390-7f9e-43b3-93df-03b207238d7e")
+		(uuid "13bf0719-a260-4c14-8f6b-8c8ab83b4bd5")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 90)
+		(at 0 0 -90)
 		(layer "F.Fab")
-		(uuid "b90526c1-ec75-4d06-9963-5527bfc32bde")
+		(uuid "4bb1ef7d-fecb-443e-9620-4a0578892a74")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -222,28 +222,28 @@
 		(size 2 1.5)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.25)
-		(uuid "6d3410d5-6992-45d1-8c6e-1e91f70ca3ed")
+		(uuid "436b26fe-05d8-4950-ae87-c5bfb700c20e")
 	)
 	(pad "2" smd roundrect
 		(at -3.15 0)
 		(size 2 1.5)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.25)
-		(uuid "410e1708-5771-4790-b1be-169a2ffc7c42")
+		(uuid "6d85d509-2321-4965-b40a-8a62a0d86c90")
 	)
 	(pad "3" smd roundrect
 		(at -3.15 2.3)
 		(size 2 1.5)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.25)
-		(uuid "f0354519-70da-44f0-91c8-89db6f3dfae8")
+		(uuid "17c88404-2326-4599-aabd-1873824ed6ff")
 	)
 	(pad "4" smd roundrect
 		(at 3.15 0)
 		(size 2 3.8)
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(roundrect_rratio 0.25)
-		(uuid "3734600f-a68c-498c-816f-0d8e641e0eed")
+		(uuid "0da98883-1e62-4f17-91c0-bf4d48af3ccf")
 	)
 	(model "${KIPRJMOD}/packages3D/SOT-223.wrl"
 		(offset
