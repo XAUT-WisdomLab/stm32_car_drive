@@ -24,8 +24,8 @@ uint8_t Uart_Rx_Cnt_2 = 0; // 接收缓冲计数
 // 发送缓冲区
 uint8_t TxBuffer_2[RXBUFFERSIZE_2];
 
-//extern DMA_HandleTypeDef hdma_usart2_rx;
-DMA_HandleTypeDef hdma_usart2_rx;
+extern DMA_HandleTypeDef hdma_usart2_rx;
+
 // [K210]实时位置原始值
 //extern char k210_msg[64];
 char k210_msg[64];

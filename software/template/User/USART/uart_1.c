@@ -23,8 +23,8 @@ uint8_t Uart_Rx_Cnt_1 = 0; // 接收缓冲计数
 // 发送缓冲区
 uint8_t TxBuffer_1[RXBUFFERSIZE_1];
 
-//extern DMA_HandleTypeDef hdma_usart3_rx;
-DMA_HandleTypeDef hdma_usart3_rx;
+extern DMA_HandleTypeDef hdma_usart3_rx;
+
 void UART3_Init(void)
 {
   /*串口硬件配置代码(使用cudeMX则不需要此部分)

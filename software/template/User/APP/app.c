@@ -31,7 +31,7 @@ uint8_t str_buff6[64] = {0};
 void App_Init(void)
 {
  
-//    UART_IT_Init(); // 总串口接收初始化
+    UART_IT_Init(); // 总串口接收初始化
     HAL_TIM_Base_Start_IT(&htim2); // 启动定时器2
 		OLED_Init();		// OLED初始化
 		OLED_Clear();
