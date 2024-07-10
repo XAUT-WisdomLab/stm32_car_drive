@@ -2,11 +2,11 @@
 #include "uart_1.h"
 #include <math.h>
 
-#define Servo_MAX_A 2500    //最大位置
-#define Servo_MAX_B 2200
+#define Servo_MAX_A 2000    //最大位置
+#define Servo_MAX_B 2000
 
-#define Servo_MIN_A 500     //最小位置
-#define Servo_MIN_B 800
+#define Servo_MIN_A 1000     //最小位置
+#define Servo_MIN_B 1000
 
 extern int32_t Servo_Kp = 0.5;            // 舵机比例系数
 extern int32_t Servo_Ki = 0.8;            // 舵机积分系数
@@ -21,10 +21,8 @@ extern uint16_t pwm_B = 1773;
 uint16_t pwm_A_last = 1500;
 uint16_t pwm_B_last = 1800;
 
-
-//extern int8_t Position_error[2];
-
-
+extern int x_err ;
+extern int y_err ;
 void Yuntai_Init()
 {
     SERVO_PWMA_Set(pwm_A);
@@ -39,42 +37,42 @@ void Yuntai_Control(void)
 }
 
 //
-//void Yuntai_PID()
-//{
-//    static int16_t L_x_err=0,L_L_x_err=0,L_y_err=0,L_L_y_err=0;
-
-//    int8_t x_err = Position_error[0];
-//    int8_t y_err = Position_error[1];
-//    printf("x_err:%d,y_err:%d\r\n",x_err,y_err);
-
-//    // 死区限制，防止抖动
-//    if (x_err > -8 && x_err < 8) x_err = 0;
-//    if (y_err > -8 && y_err < 8) y_err = 0;
+void Yuntai_PID(void)
+{
+    static int16_t L_x_err=0,L_L_x_err=0,L_y_err=0,L_L_y_err=0;
 
 
-//    // 进行PID计算
-//    // -0.2 -0.8 -0.1
-//    // 0.2 0.8 0.1
-//    pwm_A += -0 * (x_err-L_x_err)+ (-0.7)*x_err+ (40.15) * (x_err - 2 * L_x_err + L_L_x_err);
-//    pwm_B += 0.1 * (y_err-L_y_err) + (0.7)*y_err + 0.15* (y_err - 2 * L_y_err + L_L_y_err);
-//    
-//    //保存误差值
-//    L_x_err = x_err;
-//    L_L_x_err = L_x_err;
-//    
-//    L_y_err = y_err;
-//    L_L_x_err = L_y_err;
+    // 死区限制，防止抖动
+    if (x_err > -3 && x_err < 3) x_err = 0,L_x_err=0,L_L_x_err=0,L_y_err=0,L_L_y_err=0;
+    if (y_err > -3 && y_err < 3) y_err = 0,L_x_err=0,L_L_x_err=0,L_y_err=0,L_L_y_err=0;
 
-//    //输出限幅
-//    if (pwm_A > Servo_MAX_A) pwm_A = Servo_MAX_A;
-//    if (pwm_A < Servo_MIN_A) pwm_A = Servo_MIN_A;
-//    if (pwm_B > Servo_MAX_B) pwm_B = Servo_MAX_B;
-//    if (pwm_B < Servo_MIN_B) pwm_B = Servo_MIN_B;
 
-//    // 进行控制
-//    SERVO_PWMA_Set(pwm_A);
-//    SERVO_PWMB_Set(pwm_B);
-//}
+    // 进行PID计算
+    // -0.2 -0.8 -0.1
+    // 0.2 0.8 0.1
+//		pwm_B += -0.1 * (x_err-L_x_err);
+    pwm_B += 0.2 * (x_err-L_x_err)+ (0.4)*x_err+ (0) * (x_err - 2 * L_x_err + L_L_x_err);
+    pwm_A += 0.25 * (y_err-L_y_err) + (0.2)*y_err + 0* (y_err - 2 * L_y_err + L_L_y_err);
+    
+
+    //保存误差值
+    L_x_err = x_err;
+    L_L_x_err = L_x_err;
+    
+    L_y_err = y_err;
+    L_L_x_err = L_y_err;
+
+    //输出限幅
+    if (pwm_A > Servo_MAX_A) pwm_A = Servo_MAX_A;
+    if (pwm_A < Servo_MIN_A) pwm_A = Servo_MIN_A;
+    if (pwm_B > Servo_MAX_B) pwm_B = Servo_MAX_B;
+    if (pwm_B < Servo_MIN_B) pwm_B = Servo_MIN_B;
+
+    // 进行控制
+//    Yuntaiz_A_Move(pwm_A,0); //竖直
+//    Yuntaiz_B_Move(pwm_B,0); //水平
+		Yuntaiz_AB_Move_2(pwm_A,pwm_B,1);
+}
 
 
 //云台A(左右)丝滑移动,两个参数分别为目标位置和移动延时
@@ -162,45 +160,46 @@ int abs(int num) {
 
 
 
+
 //// 云台B(上下)丝滑移动，三个参数分别为目标位置和移动延时（考虑斜率）
-//void Yuntaiz_AB_Move_2(uint16_t pwm_a, uint16_t pwm_b, int16_t Flow_Coefficient)
-//{
+void Yuntaiz_AB_Move_1(uint16_t x0, uint16_t y0,uint16_t x1, uint16_t y1, uint16_t pwm_a, uint16_t pwm_b,int16_t Flow_Coefficient)
+{
 
-//    // 计算云台A和云台B的位置差
-//    int16_t diff_a = abs(pwm_a - pwm_A_last);
-//    int16_t diff_b = abs(pwm_b - pwm_B_last);
+		
+		    // 计算云台A和云台B的位置差
+    int16_t diff_a = abs(pwm_a - pwm_A_last);
+    int16_t diff_b = abs(pwm_b - pwm_B_last);
+    // 计算移动次数
+    int16_t num_steps = (diff_a > diff_b)?diff_a:diff_b;
+    
 
-//    // 计算移动次数
-//    int16_t num_steps = (diff_a > diff_b)?diff_a:diff_b;
-//    
+    // 计算云台A和云台B每次移动的增量
+    float increment_a = (float)(pwm_a - pwm_A_last) / num_steps;
+    float increment_b = (float)(pwm_b - pwm_B_last) / num_steps;
+    
+    DEBUG_info ("yuntai","increment_a:%f,increment_b:%f",increment_a,increment_b);
 
-//    // 计算云台A和云台B每次移动的增量
-//    float increment_a = (float)(pwm_a - pwm_A_last) / num_steps;
-//    float increment_b = (float)(pwm_b - pwm_B_last) / num_steps;
-//    
-//    DEBUG_info ("yuntai","increment_a:%f,increment_b:%f",increment_a,increment_b);
+    
 
-//    
+    // 插值移动云台A和云台B，直到达到目标位置
+    for (int16_t i = 0; i <= num_steps; i++)
+    {
+        // 计算当前位置
+        uint16_t current_pwm_a = round(pwm_A_last + i * increment_a);
+        uint16_t current_pwm_b = round(pwm_B_last + i * increment_b);
 
-//    // 插值移动云台A和云台B，直到达到目标位置
-//    for (int16_t i = 0; i <= num_steps; i++)
-//    {
-//        // 计算当前位置
-//        uint16_t current_pwm_a = round(pwm_A_last + i * increment_a);
-//        uint16_t current_pwm_b = round(pwm_B_last + i * increment_b);
+        // 设置云台A和云台B的位置
+        SERVO_PWMA_Set(current_pwm_a);
+        SERVO_PWMB_Set(current_pwm_b);
 
-//        // 设置云台A和云台B的位置
-//        SERVO_PWMA_Set(current_pwm_a);
-//        SERVO_PWMB_Set(current_pwm_b);
+        // 延时一段时间
+        HAL_Delay(Flow_Coefficient);
+    }
 
-//        // 延时一段时间
-//        HAL_Delay(Flow_Coefficient);
-//    }
-
-//    // 更新云台A和云台B的最新位置
-//    pwm_A_last = pwm_a;
-//    pwm_B_last = pwm_b;
-//}
+    // 更新云台A和云台B的最新位置
+    pwm_A_last = pwm_a;
+    pwm_B_last = pwm_b;
+}
 
 
 // 云台B(上下)丝滑移动，三个参数分别为目标位置和移动延时（考虑斜率）

@@ -27,11 +27,11 @@ uint8_t TxBuffer_2[RXBUFFERSIZE_2];
 extern DMA_HandleTypeDef hdma_usart2_rx;
 
 // [K210]实时位置原始值
-//extern char k210_msg[64];
-char k210_msg[64];
+extern char openmv_msg[64];
+
 // 消息接收标志位
-//extern uint8_t K210_Flag;
-uint8_t K210_Flag;
+extern uint8_t openmv_Flag;
+
 void UART2_Init(void)
 {
   /*串口硬件配置代码(使用cudeMX则不需要此部分)
@@ -43,6 +43,7 @@ void UART2_Init(void)
   HAL_UARTEx_ReceiveToIdle_DMA(&UART_HANDLE, &Uart_RxBuffer_2, 1);
   // 关闭DMA的传输过半中断
   __HAL_DMA_DISABLE_IT(&hdma_usart2_rx, DMA_IT_HT);
+
 }
 
 // 串口2接收完成回调函数
@@ -56,10 +57,11 @@ void UARTE2_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
    */
   // 将数据发送回去
   // HAL_UART_Transmit_DMA(&UART_HANDLE, RxBuffer_2, Size);
-
+	
   // 处理数据
-  strcpy(k210_msg, (const char *)RxBuffer_2);
-  K210_Flag = 1;
+  strcpy(openmv_msg, (const char *)RxBuffer_2);
+//	openmv_msg[Size] = '\0'; // 添加字符串结束符
+  openmv_Flag = 1;
 
   HAL_UARTEx_ReceiveToIdle_DMA(&UART_HANDLE, RxBuffer_2, RXBUFFERSIZE_2);
 }

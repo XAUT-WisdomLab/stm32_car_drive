@@ -11,11 +11,14 @@
 #include "uart_2.h"
 #include "pwm.h"
 #include "yuntai.h"
+//typedef struct {
+//			float x;
+//			float y;
+//		} Point;
 
-
-
-
+//void calculate_equal_points(float x_start, float y_start, float x_end, float y_end, Point points[6]);
+int openmv(void);
 void App_Init(void);
 int App_Task(void);
-
+int abs_app(int num);
 #endif // !__APP_H

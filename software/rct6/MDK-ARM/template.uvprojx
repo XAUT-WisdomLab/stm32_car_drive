@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../User;../User/LED;../User/APP;../User/PWM;../User/KEY;../User/USART;../User/OLED;../User/YunTai</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc;../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F1xx/Include;../Drivers/CMSIS/Include;../User;../User/LED;../User/APP;../User/PWM;../User/USART;../User/OLED;../User/YunTai;../User/KEY</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -731,11 +731,6 @@
               <FilePath>..\User\PWM\pwm.c</FilePath>
             </File>
             <File>
-              <FileName>key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\KEY\key.c</FilePath>
-            </File>
-            <File>
               <FileName>uart_1.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\USART\uart_1.c</FilePath>
@@ -759,6 +754,11 @@
               <FileName>yuntai.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\YunTai\yuntai.c</FilePath>
+            </File>
+            <File>
+              <FileName>key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\KEY\key.c</FilePath>
             </File>
           </Files>
         </Group>

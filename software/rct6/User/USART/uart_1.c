@@ -36,6 +36,7 @@ void UART3_Init(void)
   HAL_UARTEx_ReceiveToIdle_DMA(&UART_HANDLE, &Uart_RxBuffer_1, 1);
   // 关闭DMA的传输过半中断
   __HAL_DMA_DISABLE_IT(&hdma_usart3_rx, DMA_IT_HT);
+	
 }
 
 // 串口接收完成回调函数
@@ -47,6 +48,7 @@ void UARTE3_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
   /* NOTE: This function Should not be modified, when the callback is needed,
            the HAL_UART_TxCpltCallback could be implemented in the user file
    */
+	DEBUG_printf("APP", "op");
   // 将数据发送回去
   HAL_UART_Transmit_DMA(&UART_HANDLE, RxBuffer_1, Size);
   HAL_UARTEx_ReceiveToIdle_DMA(&UART_HANDLE, RxBuffer_1, RXBUFFERSIZE_1);
