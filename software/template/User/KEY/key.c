@@ -10,7 +10,6 @@
 
 #include "key.h"
 #include "led.h"
-//#include "gui.h"
 #include "yuntai.h"
 //#include "Buzzer.h"
 #include "app.h"
